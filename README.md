@@ -3,7 +3,9 @@ A slack bot to do sentiment analysis on any group it is invited to. You can chan
 
 # Getting Ready 
 `pip install slackclient`
+
 [Go to Slack API Page](https://api.slack.com/)
+
 ![alt text](https://www.fullstackpython.com/source/static/img/160604-simple-python-slack-bot/sign-in-slack.png)
 ![alt text](https://www.fullstackpython.com/source/static/img/160604-simple-python-slack-bot/custom-bot-users.png)
 ![alt text](https://www.fullstackpython.com/source/static/img/160604-simple-python-slack-bot/starterbot.jpg)
@@ -11,6 +13,7 @@ A slack bot to do sentiment analysis on any group it is invited to. You can chan
 After all this get your API key 
 Next you willl need to get your bot's ID 
 for that RUN this simple code just once and copy your bot ID 
+
 ```import os
 from slackclient import SlackClient
 
@@ -29,7 +32,8 @@ if __name__ == "__main__":
             if 'name' in user and user.get('name') == BOT_NAME:
                 print("Bot ID for '" + user['name'] + "' is " + user.get('id'))
     else:
-        print("could not find bot user with the name " + BOT_NAME)```
+        print("could not find bot user with the name " + BOT_NAME)
+```
         
 ##Replace all the defaults with your API's and ID's and test your bot
 
