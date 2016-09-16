@@ -14,19 +14,17 @@ After all this get your API key
 Next you willl need to get your bot's ID 
 for that RUN this simple code just once and copy your bot ID 
 
-```import os
+```
+import os
 from slackclient import SlackClient
 
 
 BOT_NAME = 'YOUR BOT NAME WHICH YOU GAVE EXAMPLE @SOMETHINGBOT'
 
 slack_client ="YOUR API KEY"
-
-
 if __name__ == "__main__":
     api_call = slack_client.api_call("users.list")
     if api_call.get('ok'):
-        # retrieve all users so we can find our bot
         users = api_call.get('members')
         for user in users:
             if 'name' in user and user.get('name') == BOT_NAME:
